@@ -1,0 +1,35 @@
+#This is an CloudFormation template example NOT following the AWS Well-Architected Framework  
+
+Resources:
+  Ec2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      SecurityGroups:
+        - !Ref InstanceSecurityGroup
+      KeyName: ec2-keypair
+      ImageId: ami-0ff8a91507f77f867
+      Tags:
+        - 
+          Key: "Environment"
+          Value: "TM_Lab"
+  InstanceSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Enable SSH access via port 22 test 
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - 
+          Key: "Environment"
+          Value: "TM_Lab"
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: test-tm-lab-s3-bucket
+      Tags:
+        - 
+          Key: "Environment"
+          Value: "TM_Lab"
