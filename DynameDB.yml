@@ -33,7 +33,6 @@ Resources:
               - 'dynamodb:PutItem'
               - 'dynamodb:Query'
               - 'dynamodb:Scan'
-              - 'dynamodb:UpdateItem'
             Resource: !GetAtt MyTable.Arn
       Roles:
         - Ref: 'MyTableRole'
