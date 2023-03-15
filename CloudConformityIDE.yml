@@ -7,7 +7,7 @@ Resources:
       SecurityGroups:
         - !Ref InstanceSecurityGroup
       KeyName: ec2-keypair
-      ImageId: ami-0ff8a91507f77f867
+      ImageId: ami-0ff8a91507f77f868
       Tags:
         - 
           Key: "Environment"
