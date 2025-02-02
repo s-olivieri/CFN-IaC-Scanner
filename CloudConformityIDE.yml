@@ -10,7 +10,7 @@ Resources:
       ImageId: ami-0ff8a91507f77f867
       Tags:
         - 
-          Key: "Environment"
+          Key: "Environments"
           Value: "TM_Lab"
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
