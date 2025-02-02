@@ -12,7 +12,7 @@ Resources:
       ProvisionedThroughput:
         ReadCapacityUnits: 1
         WriteCapacityUnits: 1
-      TableName: 'my-table'
+      TableName: 'my-table1'
       Tags:
         - Key: 'Name'
           Value: 'MyTable'
